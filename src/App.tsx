@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import * as Font from "expo-font";
 
 import WithFonts from "./shared/components/WithFonts";
 import AuthenticatedHeader from "./shared/components/AuthenticatedHeader";
