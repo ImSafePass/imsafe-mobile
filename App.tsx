@@ -1,17 +1,21 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import * as Font from "expo-font";
 
+import WithFonts from "./shared/components/WithFonts";
 import AuthenticatedHeader from "./shared/components/AuthenticatedHeader";
 import { padding } from "./shared/utils/style/dims";
 import { white } from "./shared/utils/style/colors";
 
 const App = () => (
-  <View style={styles.container}>
-    <AuthenticatedHeader />
-    <View style={styles.main}>
-      <Text style={styles.header}>Welcome to ImSafe!</Text>
+  <WithFonts>
+    <View style={styles.container}>
+      <AuthenticatedHeader />
+      <View style={styles.main}>
+        <Text style={styles.header}>Welcome to ImSafe!</Text>
+      </View>
     </View>
-  </View>
+  </WithFonts>
 );
 
 const styles = StyleSheet.create({
@@ -23,6 +27,7 @@ const styles = StyleSheet.create({
   },
   header: {
     fontSize: 40,
+    fontFamily: "Heebo-Regular",
   },
   main: {
     flexDirection: "column",

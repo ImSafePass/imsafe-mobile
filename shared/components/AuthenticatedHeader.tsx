@@ -1,12 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Feather } from "@expo/vector-icons";
+
 import { headerHeight, padding } from "../utils/style/dims";
 import { darkBlue, white } from "../utils/style/colors";
 
 const AuthenticatedHeader = () => (
   <View style={styles.header}>
     <View style={styles.logo}></View>
-    <View style={styles.hamburger}></View>
+    <View style={styles.hamburger}>
+      <Feather name="menu" size={40} color={white} />
+    </View>
   </View>
 );
 
@@ -28,7 +32,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   hamburger: {
-    backgroundColor: white,
     width: 40,
     height: 40,
   },
