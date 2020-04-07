@@ -1,0 +1,17 @@
+{
+  "name": "imsafe",
+  "displayName": "imsafe",
+  "expo": {
+    "name": "imsafe",
+    "slug": "imsafe",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
