@@ -10,8 +10,8 @@ const LogoWhite = ({ style = {} }: LogoProps) => (
   <View style={[{ alignItems: "center", justifyContent: "center" }, style]}>
     <Svg viewBox="0 0 36 49" fill="none">
       <Path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M18 0L0 6.86598V14.5988V15.2165V28.5047C0 35.9338 7.98081 41.3127 15.7874 46.5742C16.5199 47.0679 17.2508 47.5606 17.9735 48.0538C18.6962 47.5606 19.4271 47.0679 20.1596 46.5742C27.9662 41.3127 35.947 35.9338 35.947 28.5047V15.2165H36V6.86598L18 0Z"
         fill="#F4F8FB"
       />
