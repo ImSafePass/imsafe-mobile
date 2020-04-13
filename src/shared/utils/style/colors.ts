@@ -1,6 +1,6 @@
-export const darkBlue = "#1762C7";
-export const midBlue = "#2F80ED";
-export const lightGrey = "#F2F2F2";
-export const darkGrey = "#333333";
+export const royalBlue = "#3341c0";
+export const offWhite = "#eaf2fa";
 export const white = "#fff";
+export const darkPurple = "#1c2468";
 export const black = "#000";
+export const lightGray = "#ebeff3";

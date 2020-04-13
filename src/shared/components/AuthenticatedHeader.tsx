@@ -2,12 +2,24 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
+import T from "./Text";
+import Logo from "./LogoWhite";
+
 import { headerHeight, padding } from "../utils/style/dims";
-import { darkBlue, white } from "../utils/style/colors";
+import { royalBlue, white } from "../utils/style/colors";
+
+const iconDims = {
+  height: 40,
+  width: 40,
+};
 
 const AuthenticatedHeader = () => (
   <View style={styles.header}>
-    <View style={styles.logo}></View>
+    <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+      <Logo style={{ width: 30, height: 40 }} />
+      <T.H4 style={{ marginLeft: 10, color: white }}>ImSafe Pass</T.H4>
+    </View>
+
     <View style={styles.hamburger}>
       <Feather name="menu" size={40} color={white} />
     </View>
@@ -20,20 +32,18 @@ const styles = StyleSheet.create({
     height: headerHeight,
     maxHeight: headerHeight,
     justifyContent: "space-between",
-    backgroundColor: darkBlue,
+    backgroundColor: royalBlue,
     alignItems: "center",
     width: "100%",
     paddingHorizontal: padding,
   },
   logo: {
     backgroundColor: white,
-    height: 40,
-    width: 40,
     borderRadius: 20,
+    ...iconDims,
   },
   hamburger: {
-    width: 40,
-    height: 40,
+    ...iconDims,
   },
 });
 

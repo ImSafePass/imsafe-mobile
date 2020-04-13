@@ -11,19 +11,11 @@ function useFonts(fontMap: { [fontFamily: string]: Font.FontSource }) {
   return [fontsLoaded];
 }
 
-const heebos = ["ExtraBold", "Regular", "Thin"];
-const resolve = (fontTypes: string[]) =>
-  fontTypes.reduce(
-    (obj, typ) => ({
-      ...obj,
-      [`Heebo-${typ}`]: require(`../assets/fonts/Heebo/Heebo-${typ}.ttf`),
-    }),
-    {}
-  );
-
 export default (props: { children: any }) => {
   let [fontsLoaded] = useFonts({
-    ...resolve(heebos),
+    "Heebo-Bold": require("../assets/fonts/Heebo/Heebo-Bold.ttf"),
+    "Heebo-Regular": require("../assets/fonts/Heebo/Heebo-Regular.ttf"),
+    "Heebo-ExtraBold": require("../assets/fonts/Heebo/Heebo-ExtraBold.ttf"),
   });
 
   return fontsLoaded ? props.children : <AppLoading />;

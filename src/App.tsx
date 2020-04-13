@@ -1,20 +1,19 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View, Platform } from "react-native";
 
-import WithFonts from "./shared/components/WithFonts";
+import { H1, H4 } from "./shared/components/Text";
 import AuthenticatedHeader from "./shared/components/AuthenticatedHeader";
 import { padding } from "./shared/utils/style/dims";
 import { white } from "./shared/utils/style/colors";
 
 const App = () => (
-  <WithFonts>
-    <View style={styles.container}>
-      <AuthenticatedHeader />
-      <View style={styles.main}>
-        <Text style={styles.header}>Welcome to ImSafe!</Text>
-      </View>
+  <View style={styles.container}>
+    <AuthenticatedHeader />
+    <View style={styles.main}>
+      <H1>Welcome to ImSafe!</H1>
+      <H4>You're on {Platform.OS}</H4>
     </View>
-  </WithFonts>
+  </View>
 );
 
 const styles = StyleSheet.create({
@@ -23,10 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: white,
     alignItems: "center",
     justifyContent: "flex-start",
-  },
-  header: {
-    fontSize: 40,
-    fontFamily: "Heebo-Regular",
   },
   main: {
     flexDirection: "column",
