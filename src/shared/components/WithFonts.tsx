@@ -12,11 +12,13 @@ function useFonts(fontMap: { [fontFamily: string]: Font.FontSource }) {
 }
 
 export default (props: { children: any }) => {
-  let [fontsLoaded] = useFonts({
-    "Heebo-Bold": require("../assets/fonts/Heebo/Heebo-Bold.ttf"),
-    "Heebo-Regular": require("../assets/fonts/Heebo/Heebo-Regular.ttf"),
-    "Heebo-ExtraBold": require("../assets/fonts/Heebo/Heebo-ExtraBold.ttf"),
-  });
+  let [fontsLoaded] =
+    false ||
+    useFonts({
+      "Heebo-Bold": require("../assets/fonts/Heebo/Heebo-Bold.ttf"),
+      "Heebo-Regular": require("../assets/fonts/Heebo/Heebo-Regular.ttf"),
+      "Heebo-ExtraBold": require("../assets/fonts/Heebo/Heebo-ExtraBold.ttf"),
+    });
 
   return fontsLoaded ? props.children : <AppLoading />;
 };

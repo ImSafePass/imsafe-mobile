@@ -1,6 +1,5 @@
 import React from "react";
 import { Text } from "react-native";
-import WithFonts from "./WithFonts";
 
 type TProps = {
   children: any;
@@ -8,11 +7,11 @@ type TProps = {
   type?: string;
 };
 
-interface TObject {
+interface TypeSet {
   [key: string]: object;
 }
 
-const typeStyles: TObject = {
+const typeStyles: TypeSet = {
   h1: {
     fontSize: 40,
     fontFamily: "Heebo-ExtraBold",
@@ -42,20 +41,15 @@ const typeStyles: TObject = {
 const T = ({ type = "p", children, style = {}, ...other }: TProps) => {
   const typeStyle = typeStyles[type];
 
-  if (!typeStyle) {
-    throw new Error(`Bad text element type: ${type}`);
-  }
   const finalStyles = {
     ...typeStyle,
     ...style,
   };
 
   return (
-    <WithFonts>
-      <Text {...other} style={finalStyles}>
-        {children}
-      </Text>
-    </WithFonts>
+    <Text {...other} style={finalStyles}>
+      {children}
+    </Text>
   );
 };
 
@@ -65,12 +59,3 @@ export const H3 = (props: TProps) => <T {...props} type="h3" />;
 export const H4 = (props: TProps) => <T {...props} type="h4" />;
 export const P = (props: TProps) => <T {...props} type="p" />;
 export const Label = (props: TProps) => <T {...props} type="label" />;
-
-export default {
-  H1,
-  H2,
-  H3,
-  H4,
-  P,
-  Label,
-};

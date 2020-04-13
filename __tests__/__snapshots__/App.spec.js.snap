@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "flex-start",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#3341c0",
+        "flexDirection": "row",
+        "height": 80,
+        "justifyContent": "space-between",
+        "maxHeight": 80,
+        "paddingHorizontal": 15,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            Object {
+              "height": 40,
+              "width": 30,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight="100%"
+          bbWidth="100%"
+          fill="none"
+          focusable={false}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": "100%",
+                "width": "100%",
+              },
+            ]
+          }
+          vbHeight={49}
+          vbWidth={36}
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              d="M18 0L0 6.86598V14.5988V15.2165V28.5047C0 35.9338 7.98081 41.3127 15.7874 46.5742C16.5199 47.0679 17.2508 47.5606 17.9735 48.0538C18.6962 47.5606 19.4271 47.0679 20.1596 46.5742C27.9662 41.3127 35.947 35.9338 35.947 28.5047V15.2165H36V6.86598L18 0Z"
+              fill={4294244603}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+            <RNSVGPath
+              d="M27.4152 18.088C26.7675 16.8929 22.707 12.8907 17.9999 18.685C13.0567 12.8907 9.23126 16.8929 8.58468 18.088C7.40735 20.298 8.11353 23.6437 9.76201 25.2567L18.0011 33.6205L26.2401 25.2567C27.8864 23.6437 28.5925 20.2991 27.4152 18.088H27.4152Z"
+              fill={4281549248}
+              propList={
+                Array [
+                  "fill",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+            "fontFamily": "Heebo-Regular",
+            "fontSize": 24,
+            "marginLeft": 10,
+          }
+        }
+      >
+        ImSafe Pass
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+        "padding": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontFamily": "Heebo-ExtraBold",
+          "fontSize": 40,
+        }
+      }
+    >
+      Welcome to ImSafe!
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontFamily": "Heebo-Regular",
+          "fontSize": 24,
+        }
+      }
+    >
+      You're on 
+      ios
+    </Text>
+  </View>
+</View>
+`;

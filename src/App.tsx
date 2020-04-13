@@ -5,8 +5,11 @@ import { H1, H4 } from "./shared/components/Text";
 import AuthenticatedHeader from "./shared/components/AuthenticatedHeader";
 import { padding } from "./shared/utils/style/dims";
 import { white } from "./shared/utils/style/colors";
+import WithFonts from "./shared/components/WithFonts";
 
-const App = () => (
+// Exported separately for testing
+// (because WithFonts is asynchronous)
+export const BaseApp = () => (
   <View style={styles.container}>
     <AuthenticatedHeader />
     <View style={styles.main}>
@@ -14,6 +17,12 @@ const App = () => (
       <H4>You're on {Platform.OS}</H4>
     </View>
   </View>
+);
+
+const App = () => (
+  <WithFonts>
+    <BaseApp />
+  </WithFonts>
 );
 
 const styles = StyleSheet.create({

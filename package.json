@@ -6,9 +6,7 @@
     "web": "expo start --web",
     "start": "react-native start",
     "test": "jest",
-    "dep:write": "rm -f dep-graph.json && touch dep-graph.json && depcruise src -x node_modules --output-type json >> dep-graph.json",
-    "dep:write-test": "rm -f dep-graph-test.json && touch dep-graph-test.json && depcruise __tests__ -x node_modules --output-type json >> dep-graph-test.json",
-    "affected": "node scripts/affected"
+    "t": "jest --watchAll"
   },
   "dependencies": {
     "expo": "~37.0.3",
@@ -33,7 +31,7 @@
     "typescript": "~3.8.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-expo"
   },
   "private": true
 }
