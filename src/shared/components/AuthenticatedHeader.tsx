@@ -21,7 +21,7 @@ const AuthenticatedHeader = () => (
     </View>
 
     <View style={styles.hamburger}>
-      <Feather name="menu" size={40} color={white} />
+      <Feather name="menu" size={iconDims.height} color={white} />
     </View>
   </View>
 );
@@ -36,11 +36,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     paddingHorizontal: padding,
-  },
-  logo: {
-    backgroundColor: white,
-    borderRadius: 20,
-    ...iconDims,
   },
   hamburger: {
     ...iconDims,
