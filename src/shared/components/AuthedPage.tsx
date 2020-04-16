@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
-import { padding } from "../utils/style/dims";
+import { padding } from "utils/style/dims";
 import AuthenticatedHeader from "./AuthenticatedHeader";
 
 interface Props {

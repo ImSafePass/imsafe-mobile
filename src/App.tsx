@@ -1,10 +1,9 @@
 import React from "react";
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 
-import AuthedPage from "./shared/components/AuthedPage";
-import Home from "./shared/pages/Home";
-
-import WithFonts from "./shared/components/WithFonts";
+import AuthedPage from "components/AuthedPage";
+import WithFonts from "components/WithFonts";
+import Home from "pages/Home";
 
 const theme = {
   ...DefaultTheme,
