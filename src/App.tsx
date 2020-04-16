@@ -1,22 +1,29 @@
 import React from "react";
-import { StyleSheet, View, Platform } from "react-native";
+import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 
-import { H1, H4 } from "./shared/components/Text";
-import AuthenticatedHeader from "./shared/components/AuthenticatedHeader";
-import { padding } from "./shared/utils/style/dims";
-import { white } from "./shared/utils/style/colors";
+import AuthedPage from "./shared/components/AuthedPage";
+import Home from "./shared/pages/Home";
+
 import WithFonts from "./shared/components/WithFonts";
+
+const theme = {
+  ...DefaultTheme,
+  dark: true,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: "#3341c0", // royal blue
+    accent: "#1c2468", // dark blue
+  },
+};
 
 // Exported separately for testing
 // (because WithFonts is asynchronous)
 export const BaseApp = () => (
-  <View style={styles.container}>
-    <AuthenticatedHeader />
-    <View style={styles.main}>
-      <H1>Welcome to ImSafe!</H1>
-      <H4>You're on {Platform.OS}</H4>
-    </View>
-  </View>
+  <PaperProvider theme={theme}>
+    <AuthedPage>
+      <Home />
+    </AuthedPage>
+  </PaperProvider>
 );
 
 const App = () => (
@@ -24,19 +31,5 @@ const App = () => (
     <BaseApp />
   </WithFonts>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: white,
-    alignItems: "center",
-    justifyContent: "flex-start",
-  },
-  main: {
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    padding: padding,
-  },
-});
 
 export default App;

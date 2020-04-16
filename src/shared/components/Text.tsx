@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 
-type TProps = {
+type Props = {
   children: any;
   style?: object;
   type?: string;
@@ -38,7 +38,7 @@ const typeStyles: TypeSet = {
   },
 };
 
-const T = ({ type = "p", children, style = {}, ...other }: TProps) => {
+const T = ({ type = "p", children, style = {}, ...other }: Props) => {
   const typeStyle = typeStyles[type];
 
   const finalStyles = {
@@ -53,9 +53,9 @@ const T = ({ type = "p", children, style = {}, ...other }: TProps) => {
   );
 };
 
-export const H1 = (props: TProps) => <T {...props} type="h1" />;
-export const H2 = (props: TProps) => <T {...props} type="h2" />;
-export const H3 = (props: TProps) => <T {...props} type="h3" />;
-export const H4 = (props: TProps) => <T {...props} type="h4" />;
-export const P = (props: TProps) => <T {...props} type="p" />;
-export const Label = (props: TProps) => <T {...props} type="label" />;
+export const H1 = (props: Props) => <T {...props} type="h1" />;
+export const H2 = (props: Props) => <T {...props} type="h2" />;
+export const H3 = (props: Props) => <T {...props} type="h3" />;
+export const H4 = (props: Props) => <T {...props} type="h4" />;
+export const P = (props: Props) => <T {...props} type="p" />;
+export const Label = (props: Props) => <T {...props} type="label" />;

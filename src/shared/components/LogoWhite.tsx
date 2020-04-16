@@ -2,11 +2,11 @@ import React from "react";
 import { View } from "react-native";
 import Svg, { Path } from "react-native-svg";
 
-interface LogoProps {
+interface Props {
   style: object;
 }
 
-const LogoWhite = ({ style = {} }: LogoProps) => (
+const LogoWhite = ({ style = {} }: Props) => (
   <View style={[{ alignItems: "center", justifyContent: "center" }, style]}>
     <Svg viewBox="0 0 36 49" fill="none">
       <Path
